@@ -2,10 +2,14 @@
 const valorVenda = 150; //valor da compra
 const numeroParcelas = 3; //numero de parcelas
 const taxaMDR = 4; //taxa do mdr
-const numeroDias = (numeroParcelas*30);
+const numeroParcelasEmDias = (numeroParcelas*30);
+
+
+const receberAmanha = [29, 59, 89, 119, 149, 179, 209, 239, 269, 299, 329, 359]
 console.log(`Valor bruto da venda é de ${valorVenda}`)
 console.log(`Foi parcelado esse valor em ${numeroParcelas}x`)
-console.log(`Isso em dias equivale a ${numeroDias} dias`)
+console.log(`Isso em dias equivale a ${numeroParcelasEmDias} dias`)
+
 
 const transformarTaxaMDR = () => {
   const taxaMdrTransformada = taxaMDR / 100;
@@ -32,32 +36,11 @@ const valorPorMes = () => {
 const valorParcelado = valorPorMes(); // valor de venda parcelado
 console.log(`Por mês, sem o juros é de ${valorParcelado}`)
 
+
  // taxa diária
-switch (numeroDias) {
-  case 15:
-    console.log(`Parcelou em 1x e deu ${valorDescontado-(valorDescontado*(taxaAntecipacao/30)*numeroDias)}`)
-    break;
-
-    case 30:
-    console.log(`Parcelou em 2x e deu ${valorDescontado-(valorDescontado*(taxaAntecipacao/30)*numeroDias)}`)
-    break;
-    
-    case 61:
-    console.log(`Parcelou em 3x e deu ${valorDescontado-(valorDescontado*(taxaAntecipacao/30)*numeroDias)}`)
-    break;
-
-    case 91:
-    console.log(`Parcelou em 4x e deu ${valorParcelado-(valorParcelado*(taxaAntecipacao/30)*numeroDias)}`)
-    break;
-
-    case 5:
-    console.log(`Parcelou em 5x e deu ${valorDescontado/numeroParcelas}`)
-    break;
-
-
-    default:
-    console.log(`Ops! Ocorreu um erro! ${0}`)
-    break;
+if (receberAmanha[0]) {
+    // console.log(`Parcelou em 1x e deu ${valorParcelado-(valorParcelado*(taxaAntecipacao/30)*numeroParcelasEmDias)}`)
+    console.log(`Parcelou em 1x e deu ${valorParcelado-(valorParcelado*(taxaAntecipacao/30)*receberAmanha[0])}`)
 }
 
 
