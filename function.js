@@ -1,6 +1,6 @@
 
 const valorVenda = 150; //valor da compra
-const numeroParcelas = 3; //numero de parcelas
+const numeroParcelas = 2; //numero de parcelas
 const taxaMDR = 4; //taxa do mdr
 const receber1Dia = 1
 const receber15Dias = 15
