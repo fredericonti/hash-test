@@ -2,7 +2,7 @@
 const valorVenda = 150; //valor da compra
 const numeroParcelas = 2; //numero de parcelas
 const taxaMDR = 4; //taxa do mdr
-const receber1Dia = 1
+const receber1Dia = 1 
 const receber15Dias = 15
 const receber30Dias = 30
 const receber90Dias = 90
@@ -118,6 +118,9 @@ for (const mes of receberAmanha) {
   recebiveisParcelas90Dia.push(`R$${recebivelMes90Dia.toFixed(2)}`);
   recebivelTotal90Dia += recebivelMes90Dia;
 }
+
+let finalRecebiveis = document.getElementById("final-value");
+finalRecebiveis.write(recebivelTotal1Dia.toFixed(2));
 
 console.log(`As parcelas ${recebiveisParcelas1Dia}, total de ${recebivelTotal1Dia.toFixed(2)}`)
 console.log(`As parcelas ${recebiveisParcelas15Dia}, total de ${recebivelTotal15Dia.toFixed(2)}`)
