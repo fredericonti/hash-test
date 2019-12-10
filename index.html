@@ -16,21 +16,21 @@
           <h1>Simule sua Antecipação</h1>
           <form>
             <label for="venda">Informe o valor da venda *</label>
-              <input type="text" id="1name" name="1name">
+              <input type="text" id="valorVenda" name="valorVenda">
             <label for="venda">Em quantas parcelas *</label>
-              <input type="text" id="fname" name="fname"><span></span>
+              <input type="text" id="parcelas" name="parcelas"><span></span>
             <label for="venda">Informe o percentual de MDR *</label>
-              <input type="text" id="fname" name="fname">
+              <input type="text" id="mdr" name="mdr" onkeyup="update()">
           </form>
         </div>
 
         <div class="display">
           <p class="your-receive">Você receberá:</p>
           <hr/>
-          <p class="recepts-info">Amanhã: <span id="final-value">R$ 0</span></p>
-          <p class="recepts-info">Em 15 dias: <span id="final-value">R$ 0</span></p>
-          <p class="recepts-info">Em 30 dias: <span id="final-value">R$ 0</span></p>
-          <p class="recepts-info">Em 90 dias: <span id="final-value">R$ 0</span></p>
+          <p class="recepts-info">Amanhã: <span id="amanha">R$ 0</span></p>
+          <p class="recepts-info">Em 15 dias: <span id="em15">R$ 0</span></p>
+          <p class="recepts-info">Em 30 dias: <span id="em30">R$ 0</span></p>
+          <p class="recepts-info">Em 90 dias: <span id="em90">R$ 0</span></p>
 
         </div>
       </div>
